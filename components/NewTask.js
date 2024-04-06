@@ -3,7 +3,8 @@
 import React, {useState} from 'react'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
-import SimpleMDE from "react-simplemde-editor";
+import dynamic from 'next/dynamic';
+const SimpleMDE = dynamic(() => import("react-simplemde-editor"), { ssr: false });
 import "easymde/dist/easymde.min.css";
 
 const NewTask = () => {
