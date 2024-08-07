@@ -27,7 +27,7 @@ const NewTask = () => {
             document.getElementById('my_modal_3').close()
             window.location.reload()
         } catch (error) {
-            
+            console.log(error)
         }
     }
   return (

@@ -6,6 +6,8 @@ import TaskList from '@/components/TaskList'
 import Stats from '@/components/Stats'
 import NewTask from '@/components/NewTask'
 
+
+
 const Home = () => {
     const {data: session, status} = useSession()
     if(status !== 'authenticated'){

@@ -44,7 +44,7 @@ const SingleTask = (ctx) => {
     }
   return (
     <section className='px-4 py-8 max-w-screen-xl mx-auto'>
-        <h2>Single Task</h2>
+
         <table className='w-full border-collapse mt-4'>
         <thead>
             <tr>
@@ -62,13 +62,13 @@ const SingleTask = (ctx) => {
                 <td className='border border-gray-300 text-center py-2'>
                 <Link
                 href={`/task/edit/${ctx.params.id}`}
-                className='bg-gray-400 hover:bg-gray-500 py-2 font-medium px-4'
+                className='bg-blue-600 text-white hover:bg-blue-800 py-2 font-medium px-4 rounded-[4px]'
                 >
                     Edit
                 </Link>
                 <button
                 onClick={handleDeleteTask}
-                className='bg-red-400 hover:bg-red-500 py-2 px-4 ml-2'
+                className='bg-red-500 text-white hover:bg-red-700 py-2 px-4 ml-2 rounded-[4px]'
                 >
                     Delete
                 </button>

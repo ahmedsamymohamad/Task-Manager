@@ -45,25 +45,23 @@ const TaskList = () => {
             <tr>
                 <th className='border border-gray-300'>Title</th>
                 <th className='border border-gray-300'>Status</th>
-                <th className='border border-gray-400'>Update</th>
             </tr>
         </thead>
         <tbody>
             {filteredTask.map((task) => (
-                <tr key={task._id}>
-                    <td className='border border-gray-300 text-center py-2'>{task.title}</td>
-                    <td className='border border-gray-300 text-center'>{task.status}</td>
-                    <td className='border border-gray-300 text-center'>
-                    <Link
-                    href={`/task/${task._id}`}
-                    onClick={() =>{}}
-                    className='bg-gray-400 hover:bg-blue-500 py-1 px-2'
-                    >Update</Link>
-
-                    </td>
-
-                </tr>
-            ))}
+                        <tr key={task._id} className='cursor-pointer hover:bg-gray-200'>
+                            <td className='border border-gray-300 text-center'>
+                                <Link href={`/task/${task._id}`} className='block'>
+                                    {task.title}
+                                </Link>
+                            </td>
+                            <td className='border border-gray-300 text-center'>
+                                <Link href={`/task/${task._id}`} className='block'>
+                                    {task.status}
+                                </Link>
+                            </td>
+                        </tr>
+                    ))}
         </tbody>
         </table>
     </section>
